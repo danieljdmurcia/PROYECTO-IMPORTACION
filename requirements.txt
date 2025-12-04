@@ -23,6 +23,9 @@ pycparser==2.23
 pydantic==2.12.5
 pydantic_core==2.41.5
 PyJWT==2.10.1
+fastapi
+uvicorn[standard]
+
 realtime==2.25.0
 starlette==0.50.0
 storage3==2.25.0
