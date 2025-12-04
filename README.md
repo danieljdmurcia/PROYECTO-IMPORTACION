@@ -132,7 +132,7 @@ DATABASE_URL → conexión a Supabase
 
 URL pública de la API:
 
-https://proyecto-importacion.onrender.com
+https://proyecto-importacion-2.onrender.com/paises.html
 
 
 #Endpoints principales (CRUD)

@@ -1,4 +1,4 @@
-const API_BASE = "https://proyecto-importacion.onrender.com";
+const API_BASE = "https://proyecto-importacion.onrender.co";
 
 
 const categoriasBody = document.getElementById("categoriasBody");
