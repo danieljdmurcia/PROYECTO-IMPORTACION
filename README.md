@@ -9,7 +9,7 @@ Permite gestionar todo el ciclo de una operación de comercio internacional de f
 - Operaciones de **importación** y **exportación**  
 - Detalles de las operaciones (productos, cantidades, precios)  
 - Inspecciones de calidad  
-- Reportes de negocio.
+- Reportes de negocio
 
 ---
 
