@@ -38,11 +38,11 @@ Permite gestionar todo el ciclo de una operación de comercio internacional de f
 ```txt
 proyecto_agro_full/
 ├─ proyecto_agro/
-│  ├─ main.py                 # Punto de entrada de la API FastAPI
-│  ├─ models.py               # Modelos de base de datos (SQLModel)
-│  ├─ schemas.py              # Esquemas Pydantic para entrada/salida
-│  ├─ database.py             # Conexión a la BD (SQLite o Supabase)
-│  └─ routers/                # Ruters de cada módulo (CRUD + lógica)
+│  ├─ main.py                 
+│  ├─ models.py               
+│  ├─ schemas.py              
+│  ├─ database.py             
+│  └─ routers/                
 │      ├─ categorias_producto.py
 │      ├─ clientes.py
 │      ├─ proveedores.py
@@ -56,9 +56,9 @@ proyecto_agro_full/
 │
 ├─ frontend_todos_modelos/
 │  ├─ css/
-│  │  └─ styles.css           # Estilos globales para todas las páginas
+│  │  └─ styles.css           
 │  ├─ js/
-│  │  ├─ common.js            # Configuración base (URL de la API, helpers)
+│  │  ├─ common.js            
 │  │  ├─ productos.js
 │  │  ├─ clientes.js
 │  │  ├─ proveedores.js
@@ -69,7 +69,7 @@ proyecto_agro_full/
 │  │  ├─ detalles.js
 │  │  ├─ inspecciones.js
 │  │  └─ reportes.js
-│  ├─ index.html              # Panel principal
+│  ├─ index.html              
 │  ├─ productos.html
 │  ├─ clientes.html
 │  ├─ proveedores.html
@@ -84,7 +84,6 @@ proyecto_agro_full/
 ├─ requirements.txt
 └─ README.md
 
-# database.py
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///app.db")
 
 DATABASE_URL=postgresql://postgres:TU_PASSWORD@dbxxxx.supabase.co:5432/postgres?sslmode=require
@@ -113,6 +112,8 @@ Documentación Swagger: http://127.0.0.1:8000/docs
 Redoc: http://127.0.0.1:8000/redoc
 
 Endpoint raíz: http://127.0.0.1:8000/
+
+Pagina:https://proyecto-importacion-2.onrender.com/index.html
 
 
 Proveedor: Render.com
