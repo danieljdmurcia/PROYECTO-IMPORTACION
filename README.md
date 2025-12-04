@@ -1,4 +1,4 @@
-# Sistema de Gestión de Importación y Exportación de Frutas y Verduras 
+.# Sistema de Gestión de Importación y Exportación de Frutas y Verduras 
 
 Proyecto desarrollado como entrega de **Desarrollo de Software**.  
 Permite gestionar todo el ciclo de una operación de comercio internacional de frutas y verduras:
