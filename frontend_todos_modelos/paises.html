@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Países · AgroTrade</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+<header class="main-header">
+    <h1>AgroTrade</h1>
+    <p>Gestión de Países</p>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="paises.html" class="active">Países</a>
+    <a href="puertos.html">Puertos</a>
+    <a href="categorias.html">Categorías</a>
+    <a href="productos.html">Productos</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="proveedores.html">Proveedores</a>
+    <a href="medios_transporte.html">Medios</a>
+    <a href="operaciones.html">Operaciones</a>
+    <a href="detalles.html">Detalles</a>
+    <a href="inspecciones.html">Inspecciones</a>
+    <a href="reportes.html">Reportes</a>
+</nav>
+
+<main class="container">
+
+    <!-- FORMULARIO -->
+    <section class="card">
+        <h2>Registrar país</h2>
+
+        <form id="paisForm">
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre del país *</label>
+                    <input type="text" id="nombre" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="codigo">Código ISO</label>
+                    <input type="text" id="codigo" placeholder="Ej: CO, MX, US..." maxlength="3" />
+                </div>
+
+            </div>
+
+            <div class="btn-row">
+                <button class="btn" type="submit">Guardar país</button>
+                <button class="btn-secondary" type="button" id="limpiarBtn">Limpiar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- LISTADO Y BUSCADOR -->
+    <section class="card">
+        <h2>Lista de países</h2>
+
+        <div class="search-bar">
+            <input type="text" id="buscar" class="search-input"
+                placeholder="Buscar por nombre o código..." />
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>País</th>
+                        <th>Código</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="paisesBody">
+                    <!-- filas generadas por JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer class="main-footer">
+    <p>Gestión de países · AgroTrade</p>
+</footer>
+
+<script src="./js/paises.js"></script>
+</body>
+</html>

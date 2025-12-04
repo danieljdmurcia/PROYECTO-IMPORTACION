@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Detalles de operación · AgroTrade</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+<header class="main-header">
+    <h1>AgroTrade</h1>
+    <p>Gestión de detalles de operación (productos, cantidades y precios)</p>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="paises.html">Países</a>
+    <a href="puertos.html">Puertos</a>
+    <a href="categorias.html">Categorías</a>
+    <a href="productos.html">Productos</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="proveedores.html">Proveedores</a>
+    <a href="medios_transporte.html">Medios</a>
+    <a href="operaciones.html">Operaciones</a>
+    <a href="detalles.html" class="active">Detalles</a>
+    <a href="inspecciones.html">Inspecciones</a>
+    <a href="reportes.html">Reportes</a>
+</nav>
+
+<main class="container">
+
+    <!-- FORMULARIO -->
+    <section class="card">
+        <h2>Registrar detalle de operación</h2>
+
+        <form id="detalleForm">
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="operacion_id">ID Operación *</label>
+                    <input type="number" id="operacion_id" min="1" required />
+                    <small style="font-size:0.75rem;color:#6b7280;">
+                        Debe existir en el módulo de operaciones.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="producto_id">ID Producto *</label>
+                    <input type="number" id="producto_id" min="1" required />
+                    <small style="font-size:0.75rem;color:#6b7280;">
+                        Debe existir en el módulo de productos.
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label for="cantidad">Cantidad *</label>
+                    <input type="number" id="cantidad" min="0.01" step="0.01" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="precio_unitario">Precio unitario *</label>
+                    <input type="number" id="precio_unitario" min="0.01" step="0.01" required />
+                </div>
+
+            </div>
+
+            <div class="btn-row">
+                <button type="submit" class="btn">Guardar detalle</button>
+                <button type="button" id="limpiarBtn" class="btn-secondary">Limpiar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- LISTADO -->
+    <section class="card">
+        <h2>Detalles registrados</h2>
+
+        <div class="search-bar">
+            <input
+                type="text"
+                id="buscar"
+                class="search-input"
+                placeholder="Buscar por ID, operación o producto..."
+            />
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Operación</th>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio unitario</th>
+                        <th>Subtotal</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="detallesBody">
+                    <!-- filas generadas por JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer class="main-footer">
+    <p>Gestión de detalles de operación · AgroTrade</p>
+</footer>
+
+<script src="./js/detalles.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>AgroTrade - reportes</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+<header class="main-header">
+    <h1>AgroTrade</h1>
+    <p>Reportes y estadísticas del sistema</p>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="paises.html">Países</a>
+    <a href="puertos.html">Puertos</a>
+    <a href="categorias.html">Categorías</a>
+    <a href="productos.html">Productos</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="proveedores.html">Proveedores</a>
+    <a href="medios_transporte.html">Medios transporte</a>
+    <a href="operaciones.html">Operaciones</a>
+    <a href="detalles.html">Detalles</a>
+    <a href="inspecciones.html">Inspecciones</a>
+    <a href="reportes.html" class="active">Reportes</a>
+</nav>
+
+<main class="container">
+
+    <!-- REPORTES: TOP PRODUCTOS -->
+    <section class="card">
+        <h2>Top productos exportados</h2>
+        <p>Resumen de los productos con mayor volumen de exportación.</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad total</th>
+                        <th>Valor total (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="topProductosBody">
+                    <!-- Filas generadas por JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <div style="margin-top: 1rem;">
+            <canvas id="topProductosChart" height="120"></canvas>
+        </div>
+    </section>
+
+    <!-- REPORTES: OPERACIONES POR PAÍS DESTINO -->
+    <section class="card">
+        <h2>Operaciones por país destino</h2>
+        <p>Distribución de operaciones agrupadas por país de destino.</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>País destino</th>
+                        <th>Total operaciones</th>
+                        <th>Valor total (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="operacionesPaisBody">
+                    <!-- Filas generadas por JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <div style="margin-top: 1rem;">
+            <canvas id="operacionesPaisChart" height="120"></canvas>
+        </div>
+    </section>
+
+    <!-- REPORTES: OPERACIONES POR MES -->
+    <section class="card">
+        <h2>Operaciones por mes</h2>
+        <p>Evolución mensual de las operaciones registradas.</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mes</th>
+                        <th>Total operaciones</th>
+                        <th>Valor total (USD)</th>
+                    </tr>
+                </thead>
+                <tbody id="operacionesMesBody">
+                    <!-- Filas generadas por JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <div style="margin-top: 1rem;">
+            <canvas id="operacionesMesChart" height="120"></canvas>
+        </div>
+    </section>
+
+</main>
+
+<footer class="main-footer">
+    <p>Reportes · Proyecto Integrador AgroTrade</p>
+</footer>
+
+<!-- Chart.js desde CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/reportes.js"></script>
+</body>
+</html>

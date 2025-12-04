@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Categorías · AgroTrade</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+<header class="main-header">
+    <h1>AgroTrade</h1>
+    <p>Gestión de Categorías de Producto</p>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="paises.html">Países</a>
+    <a href="puertos.html">Puertos</a>
+    <a href="categorias.html" class="active">Categorías</a>
+    <a href="productos.html">Productos</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="proveedores.html">Proveedores</a>
+    <a href="medios_transporte.html">Medios</a>
+    <a href="operaciones.html">Operaciones</a>
+    <a href="detalles.html">Detalles</a>
+    <a href="inspecciones.html">Inspecciones</a>
+    <a href="reportes.html">Reportes</a>
+</nav>
+
+<main class="container">
+
+    <!-- FORMULARIO -->
+    <section class="card">
+        <h2>Registrar nueva categoría</h2>
+
+        <form id="categoriaForm">
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Nombre de la categoría</label>
+                    <input type="text" id="nombre" required />
+                </div>
+
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <textarea id="descripcion"></textarea>
+                </div>
+
+            </div>
+
+            <div class="btn-row">
+                <button class="btn" type="submit">Guardar categoría</button>
+                <button class="btn-secondary" type="button" id="limpiarBtn">Limpiar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- BUSCADOR -->
+    <section class="card">
+        <h2>Listado de categorías</h2>
+
+        <div class="search-bar">
+            <input type="text" id="buscar" class="search-input" placeholder="Buscar categoría..." />
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Categoría</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="categoriasBody">
+                    <!-- filas generadas por JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer class="main-footer">
+    <p>Gestión de categorías · AgroTrade</p>
+</footer>
+
+<script src="./js/categorias.js"></script>
+</body>
+</html>

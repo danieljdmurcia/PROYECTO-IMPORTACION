@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>AgroTrade - productos</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+<header class="main-header">
+    <h1>AgroTrade</h1>
+    <p>Gestión de productos agrícolas</p>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="paises.html">Países</a>
+    <a href="puertos.html">Puertos</a>
+    <a href="categorias.html">Categorías</a>
+    <a href="productos.html" class="active">Productos</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="proveedores.html">Proveedores</a>
+    <a href="medios_transporte.html">Medios transporte</a>
+    <a href="operaciones.html">Operaciones</a>
+    <a href="detalles.html">Detalles</a>
+    <a href="inspecciones.html">Inspecciones</a>
+    <a href="reportes.html">Reportes</a>
+</nav>
+
+<main class="container">
+
+    <section class="card">
+        <div class="toolbar">
+            <h2>Productos</h2>
+            <input type="text" id="searchInput" class="search-input" placeholder="Buscar por nombre..." />
+        </div>
+
+        <form id="productoForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nombre">Nombre *</label>
+                    <input id="nombre" name="nombre" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo *</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Fruta">Fruta</option>
+                        <option value="Verdura">Verdura</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="unidad_medida">Unidad de medida</label>
+                    <input id="unidad_medida" name="unidad_medida" value="kg" />
+                </div>
+
+                <div class="form-group">
+                    <label for="precio_referencia">Precio referencia (USD) *</label>
+                    <input id="precio_referencia" name="precio_referencia" type="number" min="0" step="0.01" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="stock_disponible">Stock disponible</label>
+                    <input id="stock_disponible" name="stock_disponible" type="number" min="0" step="0.01" value="0" />
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria_id">ID categoría (opcional)</label>
+                    <input id="categoria_id" name="categoria_id" type="number" min="1" />
+                </div>
+            </div>
+
+            <div style="margin-top: 1rem;">
+                <button type="submit" class="btn btn-primary">Guardar producto</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Listado de productos</h2>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Unidad</th>
+                        <th>Precio ref.</th>
+                        <th>Stock</th>
+                        <th>Categoría</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="productosTableBody">
+                    <!-- Filas generadas por JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
+    <p>Gestión de productos · Proyecto Integrador</p>
+</footer>
+
+<script src="js/productos.js"></script>
+</body>
+</html>

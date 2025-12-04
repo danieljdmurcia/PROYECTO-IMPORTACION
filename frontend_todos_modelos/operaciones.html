@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Operaciones · AgroTrade</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+<header class="main-header">
+    <h1>AgroTrade</h1>
+    <p>Gestión de operaciones de importación y exportación</p>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="paises.html">Países</a>
+    <a href="puertos.html">Puertos</a>
+    <a href="categorias.html">Categorías</a>
+    <a href="productos.html">Productos</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="proveedores.html">Proveedores</a>
+    <a href="medios_transporte.html">Medios</a>
+    <a href="operaciones.html" class="active">Operaciones</a>
+    <a href="detalles.html">Detalles</a>
+    <a href="inspecciones.html">Inspecciones</a>
+    <a href="reportes.html">Reportes</a>
+</nav>
+
+<main class="container">
+
+    <!-- FORMULARIO -->
+    <section class="card">
+        <h2>Registrar nueva operación</h2>
+
+        <form id="operacionForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="tipo">Tipo de operación *</label>
+                    <select id="tipo" required>
+                        <option value="">Seleccionar...</option>
+                        <option value="importacion">Importación</option>
+                        <option value="exportacion">Exportación</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha *</label>
+                    <input type="date" id="fecha" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado</label>
+                    <select id="estado">
+                        <option value="pendiente">Pendiente</option>
+                        <option value="en tránsito">En tránsito</option>
+                        <option value="completada">Completada</option>
+                        <option value="cancelada">Cancelada</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="cliente_id">ID Cliente (para exportación)</label>
+                    <input type="number" id="cliente_id" min="1" />
+                </div>
+
+                <div class="form-group">
+                    <label for="proveedor_id">ID Proveedor (para importación)</label>
+                    <input type="number" id="proveedor_id" min="1" />
+                </div>
+
+                <div class="form-group">
+                    <label for="pais_origen_id">ID País origen</label>
+                    <input type="number" id="pais_origen_id" min="1" />
+                </div>
+
+                <div class="form-group">
+                    <label for="pais_destino_id">ID País destino</label>
+                    <input type="number" id="pais_destino_id" min="1" />
+                </div>
+
+                <div class="form-group">
+                    <label for="puerto_origen_id">ID Puerto origen</label>
+                    <input type="number" id="puerto_origen_id" min="1" />
+                </div>
+
+                <div class="form-group">
+                    <label for="puerto_destino_id">ID Puerto destino</label>
+                    <input type="number" id="puerto_destino_id" min="1" />
+                </div>
+
+                <div class="form-group">
+                    <label for="medio_transporte_id">ID Medio transporte</label>
+                    <input type="number" id="medio_transporte_id" min="1" />
+                </div>
+
+                <div class="form-group" style="grid-column: 1 / -1;">
+                    <label for="observaciones">Observaciones</label>
+                    <textarea id="observaciones" placeholder="Detalles adicionales de la operación..."></textarea>
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <button type="submit" class="btn">Guardar operación</button>
+                <button type="button" id="limpiarBtn" class="btn-secondary">Limpiar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- LISTADO -->
+    <section class="card">
+        <h2>Operaciones registradas</h2>
+
+        <div class="search-bar">
+            <input
+                type="text"
+                id="buscar"
+                class="search-input"
+                placeholder="Buscar por ID, tipo, estado..."
+            />
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Cliente</th>
+                        <th>Proveedor</th>
+                        <th>Origen (país/puerto)</th>
+                        <th>Destino (país/puerto)</th>
+                        <th>Medio</th>
+                        <th>Costo total</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="operacionesBody">
+                    <!-- filas generadas por JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer class="main-footer">
+    <p>Gestión de operaciones · AgroTrade</p>
+</footer>
+
+<script src="./js/operaciones.js"></script>
+</body>
+</html>

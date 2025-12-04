@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Puertos · AgroTrade</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+<header class="main-header">
+    <h1>AgroTrade</h1>
+    <p>Gestión de Puertos (origen / destino)</p>
+</header>
+
+<nav class="main-nav">
+    <a href="index.html">Inicio</a>
+    <a href="paises.html">Países</a>
+    <a href="puertos.html" class="active">Puertos</a>
+    <a href="categorias.html">Categorías</a>
+    <a href="productos.html">Productos</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="proveedores.html">Proveedores</a>
+    <a href="medios_transporte.html">Medios</a>
+    <a href="operaciones.html">Operaciones</a>
+    <a href="detalles.html">Detalles</a>
+    <a href="inspecciones.html">Inspecciones</a>
+    <a href="reportes.html">Reportes</a>
+</nav>
+
+<main class="container">
+
+    <!-- FORMULARIO -->
+    <section class="card">
+        <h2>Registrar puerto</h2>
+
+        <form id="puertoForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="nombre">Nombre del puerto *</label>
+                    <input type="text" id="nombre" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="tipo">Tipo de puerto</label>
+                    <select id="tipo">
+                        <option value="">Seleccionar...</option>
+                        <option value="Marítimo">Marítimo</option>
+                        <option value="Aéreo">Aéreo</option>
+                        <option value="Terrestre">Terrestre</option>
+                        <option value="Fluvial">Fluvial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="pais_id">ID País *</label>
+                    <input type="number" id="pais_id" min="1" required />
+                    <small style="font-size: 0.75rem; color: #6b7280;">
+                        Debe existir previamente en el módulo de Países.
+                    </small>
+                </div>
+            </div>
+
+            <div class="btn-row">
+                <button class="btn" type="submit">Guardar puerto</button>
+                <button class="btn-secondary" type="button" id="limpiarBtn">Limpiar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- LISTADO + BUSCADOR -->
+    <section class="card">
+        <h2>Lista de puertos</h2>
+
+        <div class="search-bar">
+            <input
+                type="text"
+                id="buscar"
+                class="search-input"
+                placeholder="Buscar por nombre, tipo o país..."
+            />
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Puerto</th>
+                        <th>Tipo</th>
+                        <th>ID País</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="puertosBody">
+                    <!-- filas generadas por JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer class="main-footer">
+    <p>Gestión de puertos · AgroTrade</p>
+</footer>
+
+<script src="./js/puertos.js"></script>
+</body>
+</html>
